@@ -1,10 +1,9 @@
 class TaskList {
   constructor() {
-    this.Tasks = [] ;
+    this.Tasks = [];
   }
 
   // here are the methods to CRUD and order items
-
 }
 
 export default TaskList;
