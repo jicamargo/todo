@@ -75,7 +75,7 @@ body {
 
 /* styles for phase 2 of the project  */
 
-::placeholder { 
+::placeholder {
   text-align: left;
   padding: 0;
   margin: 0;
@@ -116,4 +116,3 @@ body {
 .task-check:checked {
   color: #ccc;
 }
-

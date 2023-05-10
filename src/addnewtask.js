@@ -1,17 +1,17 @@
-import Task from "./task.js";
-import showTaskList from "./showtasklist.js";
-import saveTasks from "./savetasks.js";
+import Task from './task.js';
+import showTaskList from './showtasklist.js';
+import saveTasks from './savetasks.js';
 
 const addNewTask = (taskList) => {
-  const newTaskInput = document.getElementById("new-task");
+  const newTaskInput = document.getElementById('new-task');
   const newTaskDescription = newTaskInput.value.trim();
 
-  if (newTaskDescription !== "") {
+  if (newTaskDescription !== '') {
     const newTask = new Task(newTaskDescription);
     const lastTaskIndex = taskList.length - 1;
     newTask.index = lastTaskIndex >= 0 ? taskList[lastTaskIndex].index + 1 : 0;
     taskList.push(newTask);
-    newTaskInput.value = "";
+    newTaskInput.value = '';
     saveTasks(taskList);
     showTaskList(taskList);
   }
