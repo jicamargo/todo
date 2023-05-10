@@ -70,7 +70,7 @@ With this app You can easily create tasks, edit, complete, and track your progre
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[View live Demo](https://jicamargo.github.io/todo/)
+live Demo coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
