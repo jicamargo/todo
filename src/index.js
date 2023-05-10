@@ -1,4 +1,21 @@
 import './style.css';
-import createTodoList from './create-todolist.js';
+import iconRefresh from './images/icon-refresh.svg';
+import iconReturn from './images/icon-return.svg';
+import getTasks from './gettasks';
+import showTaskList from './showtasklist';
+import addNewTask from './addnewtask';
 
-document.body.appendChild(createTodoList('todo-main'));
+const iconRefreshElem = document.getElementById('iconRefresh');
+const iconReturnElem = document.getElementById('iconReturn');
+iconRefreshElem.src = iconRefresh;
+iconReturnElem.src = iconReturn;
+
+
+const arrTasks = getTasks();
+showTaskList(arrTasks, 'list');
+
+const newTaskEnterBtn = document.getElementById('newTaskEnterBtn');
+newTaskEnterBtn.addEventListener('click', () => {addNewTask(arrTasks);});
+
+const newTaskInput = document.getElementById('new-task');
+newTaskInput.addEventListener('change', () => {addNewTask(arrTasks);});
