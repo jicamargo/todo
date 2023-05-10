@@ -112,3 +112,8 @@ body {
 .completed {
   text-decoration: line-through;
 }
+
+.task-check:checked {
+  color: #ccc;
+}
+

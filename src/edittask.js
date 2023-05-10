@@ -3,7 +3,7 @@ import saveTasks from "./savetasks.js";
 const editTask = (event, arrTasks, task) => {
   const taskDescription = event.target;
   const taskEditDescription = taskDescription.nextElementSibling;
-
+  
   // Hide task text and show edit task text
   taskDescription.classList.add('hidden');
   taskEditDescription.classList.remove('hidden');
