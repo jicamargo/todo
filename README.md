@@ -16,7 +16,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
   - [⭐️ Key Features ](#️-key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -66,11 +65,6 @@ With this app You can easily create tasks, edit, complete, and track your progre
 - **Mask task as completed**
 - **Clear completed tasks**
 - **Preserve the information in your PC**
-
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-live Demo coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
