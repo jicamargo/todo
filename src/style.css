@@ -121,3 +121,15 @@ body {
 .editing-task {
  background-color: lightgoldenrodyellow;
 }
+
+.list-item.dragging {
+  background-color: #bdc7ee;
+}
+
+.icon-more {
+  cursor:grab;
+}
+
+.icon-trash {
+  margin: 0 0.5rem; 
+}
