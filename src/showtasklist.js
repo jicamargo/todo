@@ -40,18 +40,18 @@ function showTaskList(arrTasks, parentElemId = 'list') {
 
     taskDescription.addEventListener('click', (event) => editTask(event, arrTasks, task));
 
-    const taskMoreButton = document.createElement('div');
-    taskMoreButton.classList = 'task-more-btn hidden';
-    taskMoreButton.innerHTML = `<img class="icon-task icon-more" src="${iconMore}" alt="more options">`;
-    taskMoreButton.addEventListener('click', () => deleteTask(arrTasks, task));
-    listItem.appendChild(taskMoreButton);
-
     const taskDelButton = document.createElement('div');
     taskDelButton.classList = 'task-delete-btn ';
     taskDelButton.innerHTML = `<img class="icon-task icon-trash" src="${iconTrash}" alt="delete trash">`;
     taskDelButton.addEventListener('click', (event) => deleteTask(event, arrTasks, task));
     listItem.appendChild(taskDelButton);
-
+    
+    const taskMoreButton = document.createElement('div');
+    taskMoreButton.classList = 'task-more-btn';
+    taskMoreButton.innerHTML = `<img class="icon-task icon-more" src="${iconMore}" alt="more options">`;
+    taskMoreButton.addEventListener('click', () => orderTask(arrTasks, task));
+    listItem.appendChild(taskMoreButton);
+    
     placeholder.appendChild(listItem);
   });
 }

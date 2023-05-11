@@ -107,6 +107,7 @@ body {
 
 .task-edit:focus {
   outline: none;
+  background-color: lightgoldenrodyellow;
 }
 
 .completed {
@@ -115,4 +116,8 @@ body {
 
 .task-check:checked {
   color: #ccc;
+}
+
+.editing-task {
+ background-color: lightgoldenrodyellow;
 }
