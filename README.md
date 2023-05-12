@@ -25,7 +25,6 @@
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
     - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -60,10 +59,10 @@ With this app You can easily create tasks, edit, complete, and track your progre
 
 ## ⭐️ Key Features <a name="key-features"></a> 
 
-- **Add new task button**
-- **Remove task button**
-- **Show list task**
-- **Mask task as completed**
+- **Minimalistic layout**
+- **CRUD (create, read, update, delete) taks**
+- **Check tasks as completed**
+- **order your tasks by priority using drag and drop**
 - **Clear completed tasks**
 - **Preserve the information in your PC**
 
@@ -114,12 +113,6 @@ Open this site in your browser and enjoy.
 - LinkedIn: [LinkedIn](https://linkedin.com/in/jorgecamargog)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Fancy animations]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## 🤝 Contributing <a name="contributing"></a>
