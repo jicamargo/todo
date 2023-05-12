@@ -4,14 +4,14 @@ import iconReturn from './images/icon-return.svg';
 import getTasks from './gettasks.js';
 import showTaskList from './showtasklist.js';
 import addNewTask from './addnewtask.js';
-import clearCompletedTasks from './clearcompletedtasks';
+import clearCompletedTasks from './clearcompletedtasks.js';
 
 const iconRefreshElem = document.getElementById('iconRefresh');
 const iconReturnElem = document.getElementById('iconReturn');
 iconRefreshElem.src = iconRefresh;
 iconReturnElem.src = iconReturn;
 
-let arrTasks = getTasks();
+const arrTasks = getTasks();
 showTaskList(arrTasks, 'list');
 
 const newTaskEnterBtn = document.getElementById('newTaskEnterBtn');

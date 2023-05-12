@@ -119,7 +119,7 @@ body {
 }
 
 .editing-task {
- background-color: lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
 }
 
 .list-item.dragging {
@@ -127,9 +127,9 @@ body {
 }
 
 .icon-more {
-  cursor:grab;
+  cursor: grab;
 }
 
 .icon-trash {
-  margin: 0 0.5rem; 
+  margin: 0 0.5rem;
 }

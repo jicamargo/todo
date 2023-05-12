@@ -3,7 +3,9 @@ import iconTrash from './images/icon-trash.svg';
 import deleteTask from './deletetask.js';
 import editTask from './edittask.js';
 import checkTask from './checktask.js';
-import {dragDrop, dragOver, dragStart, dragEnd} from './draganddrophandler.js';
+import {
+  dragDrop, dragOver, dragStart, dragEnd,
+} from './draganddrophandler.js';
 
 // builds the elements and show the todo list inside the placeholder
 function showTaskList(arrTasks, parentElemId = 'list') {
@@ -46,12 +48,12 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     taskDelButton.innerHTML = `<img class="icon-task icon-trash" src="${iconTrash}" alt="delete trash">`;
     taskDelButton.addEventListener('click', (event) => deleteTask(event, arrTasks, task));
     listItem.appendChild(taskDelButton);
-    
+
     const taskMoreButton = document.createElement('div');
     taskMoreButton.classList = 'task-more-btn';
     taskMoreButton.innerHTML = `<img class="icon-task icon-more" src="${iconMore}" alt="more options">`;
     listItem.appendChild(taskMoreButton);
-    
+
     // setup for drag and drop feauture - for manually order the tasks
     // Add draggable attribute to each list item
     listItem.draggable = true;
