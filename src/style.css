@@ -110,7 +110,7 @@ body {
   background-color: lightgoldenrodyellow;
 }
 
-.completed {
+.task-completed {
   text-decoration: line-through;
 }
 
@@ -124,6 +124,14 @@ body {
 
 .list-item.dragging {
   background-color: #bdc7ee;
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.list-item.dragging-over {
+  background-color: #859cf5;
+  opacity: 0.5;
+  cursor: grabbing;
 }
 
 .icon-more {

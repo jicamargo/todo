@@ -2,9 +2,9 @@ import iconMore from './images/icon-more-vert.svg';
 import iconTrash from './images/icon-trash.svg';
 import deleteTask from './deletetask.js';
 import editTask from './edittask.js';
-import checkTask from './checktask.js';
+import checkTaskChange from './checktaskchange.js';
 import {
-  dragDrop, dragOver, dragStart, dragEnd,
+  dragDrop, dragOver, dragStart, dragEnd, dragLeave,
 } from './draganddrophandler.js';
 
 // builds the elements and show the todo list inside the placeholder
@@ -22,7 +22,7 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     taskCheckbox.classList = 'task-check';
     taskCheckbox.type = 'checkbox';
     taskCheckbox.checked = task.completed;
-    taskCheckbox.addEventListener('change', () => checkTask(taskCheckbox, arrTasks, task));
+    taskCheckbox.addEventListener('change', () => checkTaskChange(taskCheckbox, arrTasks, task));
 
     listItem.appendChild(taskCheckbox);
 
@@ -62,6 +62,7 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     listItem.addEventListener('dragover', dragOver);
     listItem.addEventListener('drop', (event) => dragDrop(event, arrTasks));
     listItem.addEventListener('dragend', dragEnd);
+    listItem.addEventListener('dragleave', dragLeave);
 
     listItem.dataset.index = arrTasks.indexOf(task);
 

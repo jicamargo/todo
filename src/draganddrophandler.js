@@ -4,12 +4,23 @@ export const dragStart = (event) => {
   const taskItemContainer = event.target.closest('.list-item');
   event.dataTransfer.setData('text/plain', taskItemContainer.dataset.index);
   taskItemContainer.classList.add('dragging');
+  console.log("dragStart"+ taskItemContainer.dataset.index);
 };
 
 export const dragOver = (event) => {
   event.preventDefault();
   event.dataTransfer.dropEffect = 'move';
+  console.log("dragOver");
+  const taskItemContainer = event.target.closest('.list-item');
+  if (!taskItemContainer.classList.contains('dragging')) {
+      taskItemContainer.classList.add('dragging-over');
+  };};
+
+export const dragLeave = (event) => {
+  const taskItemContainer = event.target.closest('.list-item');
+  taskItemContainer.classList.remove('dragging-over');
 };
+
 
 export const dragEnd = (event) => {
   const taskItemContainer = event.target.closest('.list-item');
@@ -18,12 +29,13 @@ export const dragEnd = (event) => {
 
 export const dragDrop = (event, arrTasks) => {
   event.preventDefault();
+  const taskItemContainer = event.target.closest('.list-item');
 
   // Get index of task being dragged, and being dropped on
   const fromIndex = event.dataTransfer.getData('text/plain');
-
-  const taskItemContainer = event.target.closest('.list-item');
   const toIndex = taskItemContainer.dataset.index;
+
+  taskItemContainer.classList.remove('dragging-over');
 
   // Move task to new position
   const taskList = event.target.closest('.list');

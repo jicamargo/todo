@@ -21,4 +21,4 @@ const newTaskInput = document.getElementById('new-task');
 newTaskInput.addEventListener('change', () => { addNewTask(arrTasks); });
 
 const clearCompletedBtn = document.getElementById('btnClearCompleted');
-clearCompletedBtn.addEventListener('click', () => { clearCompletedTasks(arrTasks); });
+clearCompletedBtn.addEventListener('click', (event) => clearCompletedTasks(event, arrTasks));
