@@ -107,12 +107,37 @@ body {
 
 .task-edit:focus {
   outline: none;
+  background-color: lightgoldenrodyellow;
 }
 
-.completed {
+.task-completed {
   text-decoration: line-through;
 }
 
 .task-check:checked {
   color: #ccc;
+}
+
+.editing-task {
+  background-color: lightgoldenrodyellow;
+}
+
+.list-item.dragging {
+  background-color: #bdc7ee;
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.list-item.dragging-over {
+  background-color: #859cf5;
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.icon-more {
+  cursor: grab;
+}
+
+.icon-trash {
+  margin: 0 0.5rem;
 }

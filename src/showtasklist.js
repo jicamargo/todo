@@ -2,7 +2,10 @@ import iconMore from './images/icon-more-vert.svg';
 import iconTrash from './images/icon-trash.svg';
 import deleteTask from './deletetask.js';
 import editTask from './edittask.js';
-import checkTask from './checktask.js';
+import checkTaskChange from './checktaskchange.js';
+import {
+  dragDrop, dragOver, dragStart, dragEnd, dragLeave,
+} from './draganddrophandler.js';
 
 // builds the elements and show the todo list inside the placeholder
 function showTaskList(arrTasks, parentElemId = 'list') {
@@ -19,7 +22,7 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     taskCheckbox.classList = 'task-check';
     taskCheckbox.type = 'checkbox';
     taskCheckbox.checked = task.completed;
-    taskCheckbox.addEventListener('change', () => checkTask(taskCheckbox, arrTasks, task));
+    taskCheckbox.addEventListener('change', () => checkTaskChange(taskCheckbox, arrTasks, task));
 
     listItem.appendChild(taskCheckbox);
 
@@ -40,17 +43,30 @@ function showTaskList(arrTasks, parentElemId = 'list') {
 
     taskDescription.addEventListener('click', (event) => editTask(event, arrTasks, task));
 
-    const taskMoreButton = document.createElement('div');
-    taskMoreButton.classList = 'task-more-btn hidden';
-    taskMoreButton.innerHTML = `<img class="icon-task icon-more" src="${iconMore}" alt="more options">`;
-    taskMoreButton.addEventListener('click', () => deleteTask(arrTasks, task));
-    listItem.appendChild(taskMoreButton);
-
     const taskDelButton = document.createElement('div');
     taskDelButton.classList = 'task-delete-btn ';
     taskDelButton.innerHTML = `<img class="icon-task icon-trash" src="${iconTrash}" alt="delete trash">`;
     taskDelButton.addEventListener('click', (event) => deleteTask(event, arrTasks, task));
     listItem.appendChild(taskDelButton);
+
+    const taskMoreButton = document.createElement('div');
+    taskMoreButton.classList = 'task-more-btn';
+    taskMoreButton.innerHTML = `<img class="icon-task icon-more" src="${iconMore}" alt="more options">`;
+    listItem.appendChild(taskMoreButton);
+
+    // setup for drag and drop feauture - for manually order the tasks
+    // Add draggable attribute to each list item
+    listItem.draggable = true;
+    // Add event listeners for dragstart, dragover and drop
+    listItem.addEventListener('dragstart', dragStart);
+    listItem.addEventListener('dragover', dragOver);
+    listItem.addEventListener('drop', (event) => dragDrop(event, arrTasks));
+    listItem.addEventListener('dragend', dragEnd);
+    listItem.addEventListener('dragleave', dragLeave);
+
+    listItem.dataset.index = arrTasks.indexOf(task);
+
+    // end of setup for drag and drop feauture
 
     placeholder.appendChild(listItem);
   });
