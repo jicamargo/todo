@@ -7,9 +7,8 @@ const checkTask = (taskCheckbox, arrTasks, task) => {
   taskDescription.classList.toggle('task-completed');
   taskDescription.parentElement.classList.toggle('shine-task-completed');
   blinkEffect(taskDescription.parentElement);
-  
+
   saveTasks(arrTasks);
-  
 };
 
 export default checkTask;

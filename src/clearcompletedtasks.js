@@ -4,9 +4,9 @@ import blinkEffect from './blinkeffect.js';
 
 const clearCompletedTasks = (event, arrTasks) => {
   const arrTasksFiltered = arrTasks.filter((task) => task.completed === false);
-  
+
   blinkEffect(event.target);
-  
+
   // if there are no completed tasks, do nothing
   if (arrTasksFiltered.length === arrTasks.length) { return; }
 
@@ -18,7 +18,7 @@ const clearCompletedTasks = (event, arrTasks) => {
       arrTasks.splice(i, 1);
     }
   }
-  
+
   saveTasks(arrTasks);
   showTaskList(arrTasks, 'list');
 };
