@@ -16,6 +16,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
   - [⭐️ Key Features ](#️-key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -67,8 +68,16 @@ With this app You can easily create tasks, edit, complete, and track your progre
 - **Preserve the information in your PC**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- GETTING STARTED -->
 
+<!-- DEMO LINK -->
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [To do task lisk online demo](https://jicamargo.github.io/todo/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
 
 Open this site in your browser and enjoy.
